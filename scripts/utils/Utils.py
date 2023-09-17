@@ -1,9 +1,10 @@
-from uuid import uuid4
 import re
+from uuid import uuid4
+
 import spacy
 
-# Load the English model
-nlp = spacy.load('en_core_web_md')
+# Load the German model
+nlp = spacy.load('de_core_news_md')
 
 REGEX_PATTERNS = {
     'email_pattern': r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b',

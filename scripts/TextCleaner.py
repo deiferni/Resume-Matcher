@@ -1,15 +1,16 @@
+import string
+
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-import string
+from nltk.tokenize import word_tokenize
 
 
 class TextCleaner:
 
     def __init__(self, raw_text):
         self.stopwords_set = set(stopwords.words(
-            'english') + list(string.punctuation))
+            'german') + list(string.punctuation))
         self.lemmatizer = WordNetLemmatizer()
         self.raw_input_text = raw_text
 

@@ -116,7 +116,7 @@ def preprocess_text(text):
       A list of string tokens.
     """
 
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("de_core_news_md")
     doc = nlp(text)
 
     # Lemmatize words.

@@ -1,11 +1,12 @@
 import re
 import urllib.request
+
 import spacy
+
 from scripts.utils.Utils import TextCleaner
 
-
-# Load the English model
-nlp = spacy.load('en_core_web_sm')
+# Load the German model
+nlp = spacy.load('de_core_news_md')
 
 
 RESUME_SECTIONS = [
@@ -98,7 +99,7 @@ class DataExtractor:
         return links
 
     def extract_names(self):
-        """Extracts and returns a list of names from the given 
+        """Extracts and returns a list of names from the given
         text using spaCy's named entity recognition.
 
         Args:
